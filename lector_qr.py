@@ -20,7 +20,8 @@ def procesar_qr():
     detector = cv2.QRCodeDetector()
     
     # Intentar abrir la cámara (0 es la predeterminada)
-    cap = cv2.VideoCapture(0)
+    #cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture('http://10.35.16.110:8080/video')
     
     if not cap.isOpened():
         print("Error: No se pudo acceder a la cámara.")
